@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="dev.best.covidkotlin.ui.screen.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/to_main"
+            app:destination="@+id/main"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/to_disease"
+            app:destination="@+id/diseasae"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/to_search"
+            app:destination="@+id/search_country"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/to_Chart"
+            app:destination="@id/sumaryChart"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/to_Detail"
+            app:destination="@+id/detailCountry"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/main"
+        android:name="dev.best.covidkotlin.ui.screen.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/diseasae"
+        android:name="dev.best.covidkotlin.ui.screen.disease.DiseaseFragment"
+        tools:layout="@layout/fragment_disease" />
+
+    <fragment
+        android:id="@+id/search_country"
+        android:name="dev.best.covidkotlin.ui.screen.search.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/sumaryChart"
+        android:name="dev.best.covidkotlin.ui.screen.sumarychart.SumaryChartFragment"
+        tools:layout="@layout/fragment_sumary_chart" />
+
+    <fragment
+        android:id="@+id/detailCountry"
+        android:name="dev.best.covidkotlin.ui.screen.countrydetail.DetailCountryFragment"
+        tools:layout="@layout/fragment_detail_country" />
+</navigation>

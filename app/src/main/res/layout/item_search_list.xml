@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="item"
+            type="dev.best.covidkotlin.data.model.Country" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.country}"
+            android:textColor="@color/textColor2"
+            android:textSize="@dimen/sp_16"
+            tools:text="Sound Korea" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@{``+item.totalConfirmed}"
+            android:textColor="@color/textColor2"
+            android:textSize="@dimen/sp_16"
+            tools:text="20.000" />
+    </LinearLayout>
+</layout>

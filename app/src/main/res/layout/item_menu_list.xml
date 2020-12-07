@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="item"
+            type="dev.best.covidkotlin.data.model.ItemMenu" />
+    </data>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{item.itemName}"
+        android:padding="@dimen/dp_16"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        tools:text="item 2" />
+</layout>
